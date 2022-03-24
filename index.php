@@ -26,11 +26,6 @@ $s = scandir(getcwd());
                 </p>
             <?php endif; ?>
         <?php endforeach; ?>
-        <div>
-            <p><?= uniqid('id_', true) ?>
-            <p><?= bin2hex(openssl_random_pseudo_bytes(10)) ?>
-            <p><?= $url1 ?>
-            <p><?= str_replace(pathinfo($_SERVER['PHP_SELF'], PATHINFO_BASENAME), '', $url1) ?>
-        </div>
+        
     </body>
 </html>
