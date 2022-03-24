@@ -26,5 +26,7 @@ $s = scandir(getcwd());
             <?php endif; ?>
         <?php endforeach; ?>
         <div>
+            <?= uniqid('id_', true)?>
+        </div>
     </body>
 </html>
