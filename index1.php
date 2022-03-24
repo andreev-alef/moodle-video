@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$url1 = str_replace(pathinfo($_SERVER['PHP_SELF'], PATHINFO_BASENAME), '', 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+$url1 = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $s = scandir(getcwd());
 ?>
 <html>
@@ -27,10 +27,10 @@ $s = scandir(getcwd());
             <?php endif; ?>
         <?php endforeach; ?>
         <div>
-            <p><?= uniqid('id_', true) ?>
-            <p><?= bin2hex(openssl_random_pseudo_bytes(10)) ?>
-            <p><?= $url1 ?>
-            <p><?= str_replace(pathinfo($_SERVER['PHP_SELF'], PATHINFO_BASENAME), '', $url1) ?>
+            <p><?= uniqid('id_', true)?>
+            <p><?= bin2hex(openssl_random_pseudo_bytes(10))  ?>
+            <p><?= $url1  ?>
+            <p><?= str_replace(pathinfo($_SERVER['PHP_SELF'], PATHINFO_BASENAME),'', $url1) ?>
         </div>
     </body>
 </html>

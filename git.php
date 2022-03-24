@@ -5,6 +5,6 @@
         <title></title>
     </head>
     <body>
-        git add -A & git commit -m "Генерация идентификатора видео функцией bin2hex(openssl_random_pseudo_bytes(10))" & git push
+        git add -A & git commit -m "Генерация пути к файлу видео без имени скрипта" & git push
     </body>
 </html>
