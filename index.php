@@ -25,7 +25,6 @@ $s = scandir(getcwd());
                     <?php endif; ?>
                 </p>
             <?php endif; ?>
-        <?php endforeach; ?>
-        
+        <?php endforeach; ?>        
     </body>
 </html>
