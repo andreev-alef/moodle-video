@@ -16,8 +16,8 @@ $s = scandir(getcwd());
                     if (strstr(mime_content_type($f), 'video/')):
                         $video_code = '<video id="my-video-player" width="480" oncontextmenu="return false;" controls="" controlslist="nodownload">'
                                 . '<source src="' . $url1 . rawurlencode($f) . '"></video>';
-                        //$video_id = uniqid('', true);
                         $video_id = bin2hex(openssl_random_pseudo_bytes(10));
+                        //$video_id = uniqid('', true);
                         ?>
                         <button onclick="navigator.clipboard.writeText(document.getElementById('<?= $video_id ?>').value)">
                             Скопировать код видеоплеера в буфер</button> <a href="<?= $url1 . $f ?>"><?= $f ?></a> Тип файла: <?= mime_content_type($f) ?>
