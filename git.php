@@ -5,6 +5,6 @@
         <title></title>
     </head>
     <body>
-        git add -A & git commit -m "Генерация пути к файлу видео без имени скрипта" & git push
+        git add -A & git commit -m "Генерация кода видеоплеера" & git push
     </body>
 </html>

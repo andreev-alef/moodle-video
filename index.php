@@ -25,6 +25,10 @@ $s = scandir(getcwd());
                     <?php endif; ?>
                 </p>
             <?php endif; ?>
-        <?php endforeach; ?>        
+        <?php endforeach; ?>
+        <hr />
+        <textarea id="embed_video_code" style="width: 1000px; height: 300px; visibility: visible" placeholder="Вставьте сюда ссылку на видео"></textarea>                
+        <p><button onclick="navigator.clipboard.writeText(document.getElementById('embed_video_code').value)">
+                Скопировать код видеоплеера</button>
     </body>
 </html>
