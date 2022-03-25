@@ -28,7 +28,18 @@ $s = scandir(getcwd());
         <?php endforeach; ?>
         <hr />
         <textarea id="embed_video_code" style="width: 1000px; height: 300px; visibility: visible" placeholder="Вставьте сюда ссылку на видео"></textarea>                
-        <p><button onclick="navigator.clipboard.writeText(document.getElementById('embed_video_code').value)">
+        <p><button onclick="getVideoplayerCode()">
                 Скопировать код видеоплеера</button>
+
+
+            <script type="text/javascript">
+                function getVideoplayerCode() {
+                    var video_code = '<video id="my-video-player" width="480" oncontextmenu="return false;" controls="" controlslist="nodownload">'
+                            + '<source src="' + document.getElementById('embed_video_code').value + '"></video>';
+                    document.getElementById('embed_video_code').value = video_code;
+                    navigator.clipboard.writeText(document.getElementById('embed_video_code').value);
+                    return;
+                }
+            </script>
     </body>
 </html>
